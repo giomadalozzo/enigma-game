@@ -11,12 +11,16 @@
 		292B223E27FCCE4D00BE4361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 292B223D27FCCE4D00BE4361 /* Assets.xcassets */; };
 		292B224427FCCE4E00BE4361 /* enigma-game WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 292B224327FCCE4E00BE4361 /* enigma-game WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		292B224927FCCE4E00BE4361 /* enigma_gameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292B224827FCCE4E00BE4361 /* enigma_gameApp.swift */; };
-		292B224B27FCCE4E00BE4361 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292B224A27FCCE4E00BE4361 /* ContentView.swift */; };
 		292B224D27FCCE4E00BE4361 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292B224C27FCCE4E00BE4361 /* NotificationController.swift */; };
 		292B224F27FCCE4E00BE4361 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292B224E27FCCE4E00BE4361 /* NotificationView.swift */; };
 		292B225127FCCE4E00BE4361 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292B225027FCCE4E00BE4361 /* ComplicationController.swift */; };
 		292B225327FCCE4F00BE4361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 292B225227FCCE4F00BE4361 /* Assets.xcassets */; };
 		292B225627FCCE4F00BE4361 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 292B225527FCCE4F00BE4361 /* Preview Assets.xcassets */; };
+		292B226927FCD03A00BE4361 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292B226827FCD03A00BE4361 /* GameView.swift */; };
+		292B226B27FCD0A300BE4361 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292B226A27FCD0A300BE4361 /* Game.swift */; };
+		292B226D27FCD1FE00BE4361 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292B226C27FCD1FE00BE4361 /* PickerView.swift */; };
+		292B227027FCD25E00BE4361 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292B226F27FCD25E00BE4361 /* View+Extensions.swift */; };
+		292B227227FCD5CF00BE4361 /* PuzzleOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292B227127FCD5CF00BE4361 /* PuzzleOptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +71,6 @@
 		292B223D27FCCE4D00BE4361 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		292B224327FCCE4E00BE4361 /* enigma-game WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "enigma-game WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		292B224827FCCE4E00BE4361 /* enigma_gameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enigma_gameApp.swift; sourceTree = "<group>"; };
-		292B224A27FCCE4E00BE4361 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		292B224C27FCCE4E00BE4361 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		292B224E27FCCE4E00BE4361 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		292B225027FCCE4E00BE4361 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -75,6 +78,11 @@
 		292B225527FCCE4F00BE4361 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		292B225727FCCE4F00BE4361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		292B225827FCCE4F00BE4361 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		292B226827FCD03A00BE4361 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		292B226A27FCD0A300BE4361 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		292B226C27FCD1FE00BE4361 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		292B226F27FCD25E00BE4361 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		292B227127FCD5CF00BE4361 /* PuzzleOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleOptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +126,10 @@
 		292B224727FCCE4E00BE4361 /* enigma-game WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				292B226E27FCD22600BE4361 /* Miscellaneous */,
+				292B226727FCD01200BE4361 /* Model */,
+				292B226627FCD00900BE4361 /* Views */,
 				292B224827FCCE4E00BE4361 /* enigma_gameApp.swift */,
-				292B224A27FCCE4E00BE4361 /* ContentView.swift */,
 				292B224C27FCCE4E00BE4361 /* NotificationController.swift */,
 				292B224E27FCCE4E00BE4361 /* NotificationView.swift */,
 				292B225027FCCE4E00BE4361 /* ComplicationController.swift */,
@@ -137,6 +147,32 @@
 				292B225527FCCE4F00BE4361 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		292B226627FCD00900BE4361 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				292B226827FCD03A00BE4361 /* GameView.swift */,
+				292B226C27FCD1FE00BE4361 /* PickerView.swift */,
+				292B227127FCD5CF00BE4361 /* PuzzleOptionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		292B226727FCD01200BE4361 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				292B226A27FCD0A300BE4361 /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		292B226E27FCD22600BE4361 /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				292B226F27FCD25E00BE4361 /* View+Extensions.swift */,
+			);
+			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +303,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				292B224D27FCCE4E00BE4361 /* NotificationController.swift in Sources */,
-				292B224B27FCCE4E00BE4361 /* ContentView.swift in Sources */,
+				292B226B27FCD0A300BE4361 /* Game.swift in Sources */,
+				292B226927FCD03A00BE4361 /* GameView.swift in Sources */,
 				292B225127FCCE4E00BE4361 /* ComplicationController.swift in Sources */,
 				292B224927FCCE4E00BE4361 /* enigma_gameApp.swift in Sources */,
+				292B226D27FCD1FE00BE4361 /* PickerView.swift in Sources */,
+				292B227027FCD25E00BE4361 /* View+Extensions.swift in Sources */,
+				292B227227FCD5CF00BE4361 /* PuzzleOptionView.swift in Sources */,
 				292B224F27FCCE4E00BE4361 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
