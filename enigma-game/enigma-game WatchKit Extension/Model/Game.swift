@@ -1,8 +1,15 @@
-struct Game {
-    var didWin: Bool?
-    var selectedFirst: String?
-    var selectedSecond: String?
-    var selectedThird: String?
-    var selectedFourth: String?
-    var whichRoundWon: Int?
+import Foundation
+
+class Game: ObservableObject {
+    @Published var didWin: Bool
+    @Published var selectedFirst: Int?
+    @Published var selectedSecond: Int?
+    @Published var selectedThird: Int?
+    @Published var selectedFourth: Int?
+    @Published var whichRoundWon: Int?
+    @Published var correctAnswer: [Int]?
+    
+    init(didWin: Bool){
+        self.didWin = didWin
+    }
 }

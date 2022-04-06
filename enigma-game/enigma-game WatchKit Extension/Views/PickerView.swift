@@ -9,21 +9,24 @@ import SwiftUI
 
 struct PickerView: View {
     @State private var isSelected = 1
+    @ObservedObject var game: Game
+    var position: Int
     
     var body: some View {
         Picker("", selection: $isSelected) {
-            PuzzleOptionView(circleColor: .red, symbol: "star.fill").tag(1)
-            
-            Image(systemName: "square").tag(2)
-            Image(systemName: "triangle").tag(3)
-            Image(systemName: "hexagon").tag(4)
+            ForEach((1...6), id: \.self) {option in
+                PuzzleOptionView(type: option).tag(option)
+            }
         }.focusBorderHidden()
-            .pickerStyle(WheelPickerStyle()).frame(width: 40)
+            .pickerStyle(WheelPickerStyle()).frame(width: 40).onChange(of: isSelected) { selected in
+                getSelected(selected: selected)
+            }
+        
     }
 }
 
-struct PickerView_Previews: PreviewProvider {
-    static var previews: some View {
-        PickerView()
-    }
-}
+//struct PickerView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PickerView()
+//    }
+//}
