@@ -11,6 +11,7 @@ struct GameView: View {
     
     var answer: [Int]?
     @StateObject var actualGame: Game = Game(didWin: false)
+    @EnvironmentObject var viewRouter: ViewRouter
     
     init(){
         self.answer = generateAnswer()
@@ -27,15 +28,20 @@ struct GameView: View {
                 }
             }.overlay(Rectangle().opacity(0.3).frame(height: 30).offset(x:0, y: 8))
             
-            Button("Confirm"){
+            Button("Confirm") {
+
                 checkResult(game: actualGame)
-            }.frame(width: 154, height: 10).padding(.bottom, 18)
+                withAnimation {
+                    self.viewRouter.currentPage = .page2
+                   }
+            }
+            .frame(width: 154, height: 10).padding(.bottom, 18)
         }.ignoresSafeArea()
     }
 }
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        GameView().environmentObject(ViewRouter())
     }
 }
