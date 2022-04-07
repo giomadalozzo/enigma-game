@@ -12,10 +12,14 @@ struct MotherView: View {
     
     var body: some View {
         switch viewRouter.currentPage {
-            case .page1:
+            case .menu:
+                MenuView()
+            case .tutorial:
+                TutorialView()
+            case .game:
                 GameView()
-            case .page2:
-            EndGameView(game: Game.init(didWin: true))
+            case .endGame:
+                EndGameView(game: Game.init(didWin: true))
         }
     }
 }

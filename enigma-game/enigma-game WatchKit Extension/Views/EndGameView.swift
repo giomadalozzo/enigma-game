@@ -19,13 +19,13 @@ struct EndGameView: View {
         VStack(alignment: .center) {
            Spacer(minLength: 42)
             
-            Text(game.didWin != true ? "You Got it!" : "Wrong Code")
+            Text(game.didWin ? "You Got it!" : "Wrong Code")
                 .font(.title3)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
             Spacer()
             
-            Text(game.didWin != true ? "You got the right code!\nYour record is \(game.correctAnswer?.count ?? 5) in a row!" : "Your record is \(record) in a row!")
+            Text(game.didWin ? "You got the right code!\nYour record is \(game.correctAnswer?.count ?? 5) in a row!" : "Your record is \(record) in a row!")
                 .font(.caption2)
                 .fontWeight(.light)
                 .multilineTextAlignment(.center)
@@ -35,7 +35,7 @@ struct EndGameView: View {
 
             Button("Play Again") {
                 withAnimation {
-                    viewRouter.currentPage = .page1
+                    viewRouter.currentPage = .game
                    }
             }
             .frame(width: 184, height: 39)
