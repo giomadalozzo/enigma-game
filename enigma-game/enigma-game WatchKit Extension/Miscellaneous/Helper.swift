@@ -8,6 +8,8 @@
 import Foundation
 
 enum Page {
-    case page1
-    case page2
+    case menu
+    case tutorial
+    case game
+    case endGame
 }

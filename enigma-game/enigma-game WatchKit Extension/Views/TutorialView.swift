@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TutorialView: View {
+    
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 12) {
@@ -16,14 +19,20 @@ struct TutorialView: View {
                 
                 Text("You have 5 chances. Try to guess the correct sequence to win this challenging game.").fontWeight(.light).font(.system(size: 15)).lineSpacing(1)
                 
-                List {
-                    NavigationLink(destination: GameView()) {
-                        Text("Got it!")
-                            .foregroundColor(.orange)
-                            .bold()
-                    }
-                    
-                }.listStyle(.carousel).scaledToFit()
+                Button("Tap to play") {
+                    withAnimation {
+                        viewRouter.currentPage = .game
+                       }
+                }
+                
+//                List {
+//                    NavigationLink(destination: GameView()) {
+//                        Text("Got it!")
+//                            .foregroundColor(.orange)
+//                            .bold()
+//                    }
+//
+//                }.listStyle(.carousel).scaledToFit()
                 
             }.frame(width: 201, height: 180)
         }

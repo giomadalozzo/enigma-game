@@ -32,7 +32,7 @@ struct GameView: View {
 
                 checkResult(game: actualGame)
                 withAnimation {
-                    self.viewRouter.currentPage = .page2
+                    self.viewRouter.currentPage = .endGame
                    }
             }
             .frame(width: 154, height: 10).padding(.bottom, 18)
