@@ -25,6 +25,8 @@
 		292B227627FE080100BE4361 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292B227527FE080100BE4361 /* StatusView.swift */; };
 		292B227827FE13BF00BE4361 /* GameView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292B227727FE13BF00BE4361 /* GameView+Extensions.swift */; };
 		292B227A27FE298400BE4361 /* PickerView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292B227927FE298400BE4361 /* PickerView+Extensions.swift */; };
+		9F7F4A5127FE45C8007F4C3D /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7F4A5027FE45C8007F4C3D /* MenuView.swift */; };
+		9F7F4A5327FE4760007F4C3D /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7F4A5227FE4760007F4C3D /* TutorialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		292B227527FE080100BE4361 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		292B227727FE13BF00BE4361 /* GameView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameView+Extensions.swift"; sourceTree = "<group>"; };
 		292B227927FE298400BE4361 /* PickerView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PickerView+Extensions.swift"; sourceTree = "<group>"; };
+		9F7F4A5027FE45C8007F4C3D /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		9F7F4A5227FE4760007F4C3D /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,8 @@
 				292B226C27FCD1FE00BE4361 /* PickerView.swift */,
 				292B227127FCD5CF00BE4361 /* PuzzleOptionView.swift */,
 				292B227527FE080100BE4361 /* StatusView.swift */,
+				9F7F4A5027FE45C8007F4C3D /* MenuView.swift */,
+				9F7F4A5227FE4760007F4C3D /* TutorialView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -321,6 +327,8 @@
 				292B225127FCCE4E00BE4361 /* ComplicationController.swift in Sources */,
 				292B224927FCCE4E00BE4361 /* enigma_gameApp.swift in Sources */,
 				292B227427FDFF4100BE4361 /* PuzzleOptionView+Extensions.swift in Sources */,
+				9F7F4A5127FE45C8007F4C3D /* MenuView.swift in Sources */,
+				9F7F4A5327FE4760007F4C3D /* TutorialView.swift in Sources */,
 				292B226D27FCD1FE00BE4361 /* PickerView.swift in Sources */,
 				292B227827FE13BF00BE4361 /* GameView+Extensions.swift in Sources */,
 				292B227A27FE298400BE4361 /* PickerView+Extensions.swift in Sources */,
