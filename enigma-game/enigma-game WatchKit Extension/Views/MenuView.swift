@@ -22,15 +22,7 @@ struct MenuView: View {
                     withAnimation {
                         viewRouter.currentPage = .tutorial
                        }
-                }
-//                List {
-//                    NavigationLink(destination: TutorialView()) {
-//                        Text("Tap to play")
-//                            .foregroundColor(.orange)
-//                            .font(.system(size: 13))
-//                    }
-                    
-//                }.listStyle(.carousel).frame(width: 90, height: 10)
+                }.foregroundColor(.orange)
                 
             }
         }
