@@ -17,7 +17,10 @@ struct MotherView: View {
             case .tutorial:
                 TutorialView()
             case .game:
-                GameView()
+                TabView{
+                    GameView()
+                    
+                }
             case .endGame:
                 EndGameView(game: Game.init(didWin: true))
         }
