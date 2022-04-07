@@ -27,6 +27,10 @@
 		292B227A27FE298400BE4361 /* PickerView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292B227927FE298400BE4361 /* PickerView+Extensions.swift */; };
 		9F7F4A5127FE45C8007F4C3D /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7F4A5027FE45C8007F4C3D /* MenuView.swift */; };
 		9F7F4A5327FE4760007F4C3D /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7F4A5227FE4760007F4C3D /* TutorialView.swift */; };
+		E0692A4A27FE3ED20036FA20 /* EndGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0692A4927FE3ED20036FA20 /* EndGameView.swift */; };
+		E0692A4C27FE515B0036FA20 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0692A4B27FE515A0036FA20 /* ViewRouter.swift */; };
+		E0692A4E27FE51B00036FA20 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0692A4D27FE51B00036FA20 /* Helper.swift */; };
+		E0692A5027FE52A10036FA20 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0692A4F27FE52A10036FA20 /* MotherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +99,10 @@
 		292B227927FE298400BE4361 /* PickerView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PickerView+Extensions.swift"; sourceTree = "<group>"; };
 		9F7F4A5027FE45C8007F4C3D /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		9F7F4A5227FE4760007F4C3D /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		E0692A4927FE3ED20036FA20 /* EndGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameView.swift; sourceTree = "<group>"; };
+		E0692A4B27FE515A0036FA20 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		E0692A4D27FE51B00036FA20 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		E0692A4F27FE52A10036FA20 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +178,8 @@
 				292B227527FE080100BE4361 /* StatusView.swift */,
 				9F7F4A5027FE45C8007F4C3D /* MenuView.swift */,
 				9F7F4A5227FE4760007F4C3D /* TutorialView.swift */,
+				E0692A4927FE3ED20036FA20 /* EndGameView.swift */,
+				E0692A4F27FE52A10036FA20 /* MotherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +199,8 @@
 				292B227327FDFF4100BE4361 /* PuzzleOptionView+Extensions.swift */,
 				292B227727FE13BF00BE4361 /* GameView+Extensions.swift */,
 				292B227927FE298400BE4361 /* PickerView+Extensions.swift */,
+				E0692A4D27FE51B00036FA20 /* Helper.swift */,
+				E0692A4B27FE515A0036FA20 /* ViewRouter.swift */,
 			);
 			path = Miscellaneous;
 			sourceTree = "<group>";
@@ -320,12 +332,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0692A4C27FE515B0036FA20 /* ViewRouter.swift in Sources */,
 				292B224D27FCCE4E00BE4361 /* NotificationController.swift in Sources */,
 				292B226B27FCD0A300BE4361 /* Game.swift in Sources */,
 				292B227627FE080100BE4361 /* StatusView.swift in Sources */,
 				292B226927FCD03A00BE4361 /* GameView.swift in Sources */,
 				292B225127FCCE4E00BE4361 /* ComplicationController.swift in Sources */,
 				292B224927FCCE4E00BE4361 /* enigma_gameApp.swift in Sources */,
+				E0692A4E27FE51B00036FA20 /* Helper.swift in Sources */,
+				E0692A4A27FE3ED20036FA20 /* EndGameView.swift in Sources */,
+				E0692A5027FE52A10036FA20 /* MotherView.swift in Sources */,
 				292B227427FDFF4100BE4361 /* PuzzleOptionView+Extensions.swift in Sources */,
 				9F7F4A5127FE45C8007F4C3D /* MenuView.swift in Sources */,
 				9F7F4A5327FE4760007F4C3D /* TutorialView.swift in Sources */,
