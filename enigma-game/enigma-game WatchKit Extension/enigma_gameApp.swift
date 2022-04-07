@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct enigma_gameApp: App {
+    @StateObject var viewRouter = ViewRouter()
+    
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                GameView()
+                MotherView().environmentObject(viewRouter)
             }
         }
 
