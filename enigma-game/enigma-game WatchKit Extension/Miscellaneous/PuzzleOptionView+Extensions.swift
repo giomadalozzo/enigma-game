@@ -28,4 +28,10 @@ extension PuzzleOptionView  {
             return
         }
     }
+    
+    mutating func setResult(index: Int, game:Game){
+        var actualResult = game.rounds[index]
+        
+        self.getColorSymbol(type: actualResult)
+    }
 }

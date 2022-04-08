@@ -8,18 +8,38 @@
 import SwiftUI
 
 struct StatusView: View {
-    var body: some View {
-        ZStack{
-            RoundedRectangle(cornerRadius: 5).stroke(lineWidth: 1.5).frame(width: 40, height: 40).foregroundColor(.green)
-            PuzzleOptionView(type: 1)
-                Circle().frame(width: 5, height: 5)
-                Spacer()
-        }.overlay(Image(systemName: "x.circle.fill").offset(x:11, y: -11).foregroundColor(.green))
+    var symbol: String?
+    var color: Color?
+    var index: Int
+    @ObservedObject var game: Game
+    
+    init(game: Game, index: Int){
+        self.index = index
+        self.game = game
+        setSymbol()
     }
-}
-
-struct StatusView_Previews: PreviewProvider {
-    static var previews: some View {
-        StatusView()
+    var body: some View {
+        Image(systemName: symbol!).offset(x:11, y: -11).foregroundColor(color!)
+    }
+    
+    mutating func setSymbol(){
+        print("index")
+        print(index)
+        let selectedOption = game.overlay[index]
+        
+        switch selectedOption{
+        case .wrong:
+            self.symbol = "x.circle.fill"
+            self.color = .red
+        case .contains:
+            self.symbol = "exclamationmark.circle.fill"
+            self.color = .yellow
+        case .correct:
+            self.symbol = "checkmark.circle.fill"
+            self.color = .green
+        default:
+            print("error")
+        }
+        
     }
 }

@@ -9,20 +9,22 @@ import SwiftUI
 
 struct MotherView: View {
     @EnvironmentObject var viewRouter: ViewRouter
+    @EnvironmentObject var actualGame: Game
+    @State var whichTab: Int = 0
     
     var body: some View {
         switch viewRouter.currentPage {
-            case .menu:
-                MenuView()
-            case .tutorial:
-                TutorialView()
-            case .game:
-                TabView{
-                    GameView()
-                    
-                }
-            case .endGame:
-                EndGameView(game: Game.init(didWin: true))
+        case .menu:
+            MenuView()
+        case .tutorial:
+            TutorialView()
+        case .game:
+            TabView(selection: $whichTab){
+                GameView(game: self.actualGame, tabSelection: $whichTab).tag(0)
+                ResultView(game: self.actualGame).tag(1)
+            }
+        case .endGame:
+            EndGameView(game:self.actualGame, tabSelected: $whichTab)
         }
     }
 }

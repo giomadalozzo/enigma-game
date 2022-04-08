@@ -9,39 +9,38 @@ import SwiftUI
 
 struct GameView: View {
     
-    var answer: [Int]?
-    @StateObject var actualGame: Game = Game(didWin: false)
+    @ObservedObject var game: Game
     @EnvironmentObject var viewRouter: ViewRouter
-    
-    init(){
-        self.answer = generateAnswer()
-        self.actualGame.correctAnswer = answer
-    }
+    @Binding var tabSelection: Int
     
     var body: some View {
         VStack(alignment: .center, spacing: 20){
             ZStack{
                 HStack{
                     ForEach((1...4), id: \.self) {position in
-                        PickerView(game: self.actualGame, position: position)
+                        PickerView(game: self.game, position: position)
                     }
                 }
             }.overlay(Rectangle().opacity(0.3).frame(height: 30).offset(x:0, y: 8))
             
             Button("Confirm") {
-
-                checkResult(game: actualGame)
-                withAnimation {
-                    self.viewRouter.currentPage = .endGame
-                   }
+                self.game.actualRound += 1
+                self.game.didWin = checkResult(game: self.game)
+                
+                if self.game.actualRound <= 4 {
+                    if self.game.didWin {
+                        self.viewRouter.currentPage = .endGame
+                    }
+                }else{
+                    withAnimation {
+                        self.viewRouter.currentPage = .endGame
+                    }
+                }
+                self.tabSelection = 1
             }
             .frame(width: 154, height: 10).padding(.bottom, 18)
-        }.ignoresSafeArea()
-    }
-}
-
-struct GameView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameView().environmentObject(ViewRouter())
+        }.ignoresSafeArea().onDisappear {
+            print(self.game.didWin)
+        }
     }
 }

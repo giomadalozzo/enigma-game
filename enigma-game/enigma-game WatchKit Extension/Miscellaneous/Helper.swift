@@ -13,3 +13,9 @@ enum Page {
     case game
     case endGame
 }
+
+enum Results {
+    case correct
+    case wrong
+    case contains
+}

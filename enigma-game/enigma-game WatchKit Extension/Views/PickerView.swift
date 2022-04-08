@@ -15,7 +15,7 @@ struct PickerView: View {
     var body: some View {
         Picker("", selection: $isSelected) {
             ForEach((1...6), id: \.self) {option in
-                PuzzleOptionView(type: option).tag(option)
+                PuzzleOptionView(type: option, index: nil, isResult: false, game: game).tag(option)
             }
         }.focusBorderHidden()
             .pickerStyle(WheelPickerStyle()).frame(width: 40).onChange(of: isSelected) { selected in
@@ -24,9 +24,3 @@ struct PickerView: View {
         
     }
 }
-
-//struct PickerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PickerView()
-//    }
-//}

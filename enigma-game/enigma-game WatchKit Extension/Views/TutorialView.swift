@@ -13,28 +13,19 @@ struct TutorialView: View {
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .center, spacing: 12) {
+            VStack(alignment: .center, spacing: 6) {
                 
-                Text("How to play").fontWeight(.semibold).font(.system(size: 18))
+                Text("How to play").fontWeight(.semibold).font(.system(size: 15))
                 
-                Text("You have 5 chances. Try to guess the correct sequence to win this challenging game.").fontWeight(.light).font(.system(size: 15)).lineSpacing(1)
+                Text("You have 5 chances. Try to guess the correct sequence to win! ").fontWeight(.light).font(.system(size: 15)).lineSpacing(1).multilineTextAlignment(.center)
                 
-                Button("Tap to play") {
+                Button("Got it!") {
                     withAnimation {
+                        
                         viewRouter.currentPage = .game
                        }
-                }
-                
-//                List {
-//                    NavigationLink(destination: GameView()) {
-//                        Text("Got it!")
-//                            .foregroundColor(.orange)
-//                            .bold()
-//                    }
-//
-//                }.listStyle(.carousel).scaledToFit()
-                
-            }.frame(width: 201, height: 180)
+                }.foregroundColor(.purple)
+            }.frame(width: .infinity, height:  .infinity).ignoresSafeArea()
         }
     }
 }

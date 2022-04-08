@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct ResultView: View {
-    @StateObject var game:Game
+    
+    var results: [Int] = []
+    @ObservedObject var game: Game
     
     var body: some View {
-        generateResults()
-        PuzzleOptionView(type: type)
-    }
-    
-    func generateResults(){
-        PuzzleOptionView(type: self.game.selectedFirst)
-        PuzzleOptionView(type: self.game.selectedFirst)
-        PuzzleOptionView(type: self.game.selectedFirst)
-        PuzzleOptionView(type: self.game.selectedFirst)
-    }
-}
-
-struct ResultView_Previews: PreviewProvider {
-    static var previews: some View {
-        ResultView()
+        
+        ScrollView{
+            Spacer(minLength: 20)
+            VStack{
+                ForEach(Array(stride(from: 0, to: game.rounds.count, by: 4)), id:\.self) { roundJump in
+                    HStack(spacing: 5){
+                        ForEach(Array(stride(from: roundJump, to: roundJump+4, by: 1)), id:\.self) { index in
+                            PuzzleOptionView(type: nil, index: index, isResult: true, game: game).overlay(StatusView(game: game, index: index))
+                        }
+                    }
+                }
+            }.frame(maxWidth: .infinity)
+        }.frame(maxWidth: .infinity)
     }
 }

@@ -10,11 +10,22 @@ import SwiftUI
 struct PuzzleOptionView: View {
     var circleColor: Color?
     var symbol: String?
-    var type: Int
+    var index: Int?
+    var type: Int?
+    var isResult: Bool
+    @ObservedObject var game: Game
     
-    init(type: Int){
+    init(type: Int?, index: Int?, isResult: Bool, game: Game){
+        self.isResult = isResult
+        self.index = index
         self.type = type
-        getColorSymbol(type: self.type)
+        self.game = game
+        
+        if !isResult {
+            getColorSymbol(type: self.type!)
+        }else{
+            setResult(index: self.index!, game: self.game)
+        }
     }
     
     var body: some View {
@@ -26,9 +37,3 @@ struct PuzzleOptionView: View {
         }
     }
 }
-
-//struct PuzzleOptionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PuzzleOptionView()
-//    }
-//}
