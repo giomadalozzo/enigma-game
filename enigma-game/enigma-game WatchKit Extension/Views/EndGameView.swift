@@ -13,22 +13,22 @@ struct EndGameView: View {
     @Binding var tabSelected: Int
     
     var body: some View {
-        VStack(alignment: .center) {
-           Spacer(minLength: 42)
+        VStack(alignment: .center, spacing: 20) {
+           Spacer(minLength: 10)
             
-            Text(self.game.didWin ? "You Got it!" : "Wrong Code")
+            Text(self.game.didWin ? "Congrats!" : "Oh no!")
                 .font(.title3)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
-            Spacer()
+            //Spacer()
             
-            Text(self.game.didWin ? "You got the right code!" : "Ops! Try again.")
+            Text(self.game.didWin ? "You got the right code 🎉" : "It wasn't this time 🥲 \nTry again.")
                 .font(.caption2)
                 .fontWeight(.light)
                 .multilineTextAlignment(.center)
                 .layoutPriority(1)
             
-            Spacer(minLength: 42)
+            //Spacer(minLength: 42)
 
             Button("Play Again") {
                 withAnimation {
@@ -52,8 +52,9 @@ struct EndGameView: View {
                     self.game.overlay = []
                     self.game.correctAnswer = self.game.generateAnswer()
                    }
-            }
-            .frame(width: .infinity, height: .infinity).onAppear {
+            }.foregroundColor(.purple)
+//            .frame(width: .infinity, height: .infinity)
+            .onAppear {
                 print(self.game.didWin)
             }
             Spacer()

@@ -17,7 +17,7 @@ struct TutorialView: View {
                 
                 Text("How to play").fontWeight(.semibold).font(.system(size: 15))
                 
-                Text("You have 5 chances. Try to guess the correct sequence to win! ").fontWeight(.light).font(.system(size: 15)).lineSpacing(1).multilineTextAlignment(.center)
+                Text("You have 5 chances. \nTry to guess the correct sequence to win. ").fontWeight(.light).font(.system(size: 15)).lineSpacing(1).multilineTextAlignment(.center)
                 
                 Button("Got it!") {
                     withAnimation {

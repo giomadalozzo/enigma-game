@@ -13,15 +13,15 @@ struct MenuView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(alignment: .center, spacing: 30) {
                 
                 Image("Logo").resizable().scaledToFit()
-                Spacer()
+                
                 Button("Tap to play"){
                     withAnimation {
                         viewRouter.currentPage = .tutorial
                        }
-                }.foregroundColor(.purple)
+                }.foregroundColor(.purple).scaledToFit()
             }
         }
     }
